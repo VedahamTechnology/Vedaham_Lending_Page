@@ -22,7 +22,7 @@ const CONTACT_PHONE = "+91 75879 87770";
 const CONTACT_PHONE_WHATSAPP = "917587987770";
 const CONTACT_EMAIL = "vedahamtechnology1@gmail.com";
 const CONTACT_ADDRESS = "PU4, Near Medanta Hospital, Indore, Madhya Pradesh 452010";
-const WHATSAPP_MESSAGE = "Hi, I need something.";
+const WHATSAPP_MESSAGE = "Hi, I am interested in your services. Could you please provide more information?";
 const WHATSAPP_URL = `https://wa.me/${CONTACT_PHONE_WHATSAPP}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 const CONTACT_MAP_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_ADDRESS)}`;
 
@@ -891,11 +891,11 @@ function Contact() {
                       onFocus={(e) => { e.currentTarget.style.borderColor = `${BRAND_BLUE}80`; e.currentTarget.style.boxShadow = `0 0 0 3px ${BRAND_BLUE}25`; }}
                       onBlur={(e)  => { e.currentTarget.style.borderColor = ""; e.currentTarget.style.boxShadow = ""; }}
                     >
-                      <option>Under $5,000</option>
-                      <option>$5,000 – $15,000</option>
-                      <option>$15,000 – $50,000</option>
-                      <option>$50,000 – $150,000</option>
-                      <option>$150,000+</option>
+                      <option>Under ₹5,000</option>
+                      <option>₹5,000 – ₹15,000</option>
+                      <option>₹15,000 – ₹50,000</option>
+                      <option>₹50,000 – ₹150,000</option>
+                      <option>₹150,000+</option>
                     </select>
                   </div>
                 </div>
