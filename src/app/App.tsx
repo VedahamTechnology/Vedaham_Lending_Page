@@ -9,6 +9,7 @@ import {
   ChevronLeft, ChevronRight, Globe, Database, Server,
   Layers, BarChart3, Lock, Rocket, Target, Play, Monitor,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import vedahamLogo from "@/imports/vedaham_Company_Logo.jpeg";
 import darklogo from  "@/imports/darklogo.jpeg";
 
@@ -17,6 +18,13 @@ const BRAND_BLUE   = "#3D8FD4";
 const BRAND_TEAL   = "#2BBFC0";
 const BRAND_ORANGE = "#F7A723";
 const BRAND_GREEN  = "#7DC242";
+const CONTACT_PHONE = "+91 75879 87770";
+const CONTACT_PHONE_WHATSAPP = "917587987770";
+const CONTACT_EMAIL = "vedahamtechnology1@gmail.com";
+const CONTACT_ADDRESS = "PU4, Near Medanta Hospital, Indore, Madhya Pradesh 452010";
+const WHATSAPP_MESSAGE = "Hi, I need something.";
+const WHATSAPP_URL = `https://wa.me/${CONTACT_PHONE_WHATSAPP}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+const CONTACT_MAP_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_ADDRESS)}`;
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 
@@ -150,13 +158,13 @@ function Navbar({ dark, setDark }: { dark: boolean; setDark: (v: boolean) => voi
 
   return (
     <nav
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300  ${
         scrolled
           ? "backdrop-blur-2xl bg-background/80 border-b border-border shadow-lg shadow-black/5 dark:shadow-black/30"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between" style={{ height: 72 }}>
+      <div className="max-w-7xl mx-auto px-10 flex items-center justify-between" style={{ height: 72 }}>
         {/* Logo */}
         <a href="#" className="flex items-center flex-shrink-0">
           <img
@@ -235,14 +243,14 @@ function Hero() {
   return (
     <section
   id="hero"
-  className="relative min-h-screen flex items-center overflow-hidden pt-20"
+  className="relative min-h-screen flex items-center overflow-hidden pt-10"
 >
       {/* Ambient background */}
       <div className="absolute inset-0 pointer-events-none">
         
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center w-full">
+      <div className="relative max-w-7xl mx-auto px-6 py-10 grid lg:grid-cols-2 gap-16 items-center w-full">
         {/* Copy */}
         <div>
           <div
@@ -484,7 +492,7 @@ function About() {
 
 function Services() {
   return (
-    <section id="services" className="py-24 bg-muted/20 dark:bg-muted/10">
+    <section id="services" className="py-10 bg-muted/20 dark:bg-muted/10">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHead
           badge="Services"
@@ -524,7 +532,7 @@ function Portfolio() {
   const visible = filter === "All" ? PORTFOLIO : PORTFOLIO.filter((p) => p.category === filter);
 
   return (
-    <section id="portfolio" className="py-24">
+    <section id="portfolio" className="py-10">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHead
           badge="Portfolio"
@@ -610,7 +618,7 @@ function Portfolio() {
 
 function WhyUs() {
   return (
-    <section id="why-us" className="py-24 bg-muted/20 dark:bg-muted/10">
+    <section id="why-us" className="py-10 bg-muted/20 dark:bg-muted/10">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHead
           badge="Why Vedaham"
@@ -662,7 +670,7 @@ function Testimonials() {
   const t = TESTIMONIALS[idx];
 
   return (
-    <section id="testimonials" className="py-24">
+    <section id="testimonials" className="py-10">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHead
           badge="Testimonials"
@@ -746,7 +754,7 @@ function Testimonials() {
 
 function Process() {
   return (
-    <section id="process" className="py-24 bg-muted/20 dark:bg-muted/10">
+    <section id="process" className="py-10 bg-muted/20 dark:bg-muted/10">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHead
           badge="Our Process"
@@ -802,7 +810,7 @@ function Contact() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-10">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHead
           badge="Contact Us"
@@ -916,9 +924,9 @@ function Contact() {
           {/* Details */}
           <div className="lg:col-span-2 space-y-4">
             {[
-              { icon: Mail,  label: "Email",         value: "hello@vedaham.tech",             sub: "We respond within 24 hours" },
-              { icon: Phone, label: "Phone",         value: "+91 44 4567 8901",               sub: "Mon–Fri, 9 AM – 7 PM IST" },
-              { icon: MapPin,label: "Office",        value: "Tidel Park, Taramani, Chennai — 600 113", sub: "Tamil Nadu, India" },
+              { icon: Mail,  label: "Email",         value: CONTACT_EMAIL,                    sub: "We respond within 24 hours" },
+              { icon: Phone, label: "Phone",         value: CONTACT_PHONE,                    sub: "Mon–Fri, 9 AM – 7 PM IST" },
+              { icon: MapPin,label: "Office",        value: CONTACT_ADDRESS,                  sub: "Indore, Madhya Pradesh" },
               { icon: Clock, label: "Working Hours", value: "Mon–Fri: 9 AM – 7 PM IST",       sub: "Sat: 10 AM – 2 PM IST" },
             ].map(({ icon: Icon, label, value, sub }) => (
               <div
@@ -951,9 +959,9 @@ function Contact() {
                 >
                   <MapPin className="w-5 h-5" style={{ color: BRAND_BLUE }} />
                 </div>
-                <p className="text-sm font-semibold text-foreground">Tidel Park, Chennai</p>
-                <p className="text-xs text-muted-foreground mt-0.5">India's Silicon Valley</p>
-                <a href="#" className="mt-3 text-xs font-semibold hover:underline" style={{ color: BRAND_BLUE }}>
+                <p className="text-sm font-semibold text-foreground">{CONTACT_ADDRESS}</p>
+                <p className="text-xs text-muted-foreground mt-0.5">Indore, Madhya Pradesh</p>
+                <a href={CONTACT_MAP_URL} target="_blank" rel="noreferrer" className="mt-3 text-xs font-semibold hover:underline" style={{ color: BRAND_BLUE }}>
                   Open in Maps →
                 </a>
               </div>
@@ -971,7 +979,7 @@ function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 bg-muted/20 dark:bg-muted/10">
+    <section id="faq" className="py-10 bg-muted/20 dark:bg-muted/10">
       <div className="max-w-3xl mx-auto px-6">
         <SectionHead
           badge="FAQ"
@@ -1018,7 +1026,7 @@ function FAQ() {
 
 function CTA() {
   return (
-    <section className="py-16 px-6">
+    <section className="py-10 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden p-12 md:p-20 text-center">
           <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${BRAND_BLUE}, #1fa8a8, ${BRAND_TEAL})` }} />
@@ -1118,14 +1126,14 @@ function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4">Get In Touch</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: BRAND_BLUE }} />hello@vedaham.tech
+                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: BRAND_BLUE }} />{CONTACT_EMAIL}
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: BRAND_BLUE }} />+91 44 4567 8901
+                <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: BRAND_BLUE }} />{CONTACT_PHONE}
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: BRAND_BLUE }} />
-                <span>Tidel Park, Taramani<br />Chennai — 600 113, India</span>
+                <span>{CONTACT_ADDRESS}</span>
               </li>
             </ul>
           </div>
@@ -1149,7 +1157,7 @@ function Footer() {
 // ─── App root ────────────────────────────────────────────────────────────────
 
 export default function App() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
@@ -1167,6 +1175,8 @@ export default function App() {
         * { box-sizing: border-box; }
       `}</style>
       <Navbar dark={dark} setDark={setDark} />
+      <div className="px-6 py-4">
+
       <Hero />
       <StatsBar />
       <About />
@@ -1178,7 +1188,19 @@ export default function App() {
       <Contact />
       <FAQ />
       <CTA />
+      </div>
       <Footer />
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full px-3 py-3 text-white shadow-2xl transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02]"
+        style={{ background: "#25D366", boxShadow: "0 16px 35px rgba(37, 211, 102, 0.35)" }}
+      >
+        <FaWhatsapp className="h-6 w-6" />
+        {/* <span className="hidden sm:inline text-sm font-semibold"></span> */}
+      </a>
     </div>
   );
 }
