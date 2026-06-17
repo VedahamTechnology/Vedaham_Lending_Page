@@ -49,10 +49,38 @@ const PORTFOLIO = [
 ];
 
 const TESTIMONIALS = [
-  { name: "Rajesh Krishnamurthy", role: "CTO",              company: "TechVentures India", review: "Vedaham delivered our cloud migration 3 weeks ahead of schedule. Their technical depth and proactive communication were outstanding — genuinely the best vendor relationship we've ever had.", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format", rating: 5 },
-  { name: "Sarah Mitchell",       role: "Product Director", company: "HealthBridge UK",    review: "The mobile app they built has a 4.8-star rating on both stores. The UI/UX work was exceptional — they understood our users better than we expected from a first engagement.",              avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=80&h=80&fit=crop&auto=format", rating: 5 },
-  { name: "Ahmed Al-Rashid",      role: "Founder & CEO",    company: "RetailPro MENA",     review: "We needed a complex ERP integration in 6 months. Vedaham delivered on time and built it in a way our internal team can maintain. That kind of thoughtfulness is genuinely rare.",           avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&auto=format", rating: 5 },
-  { name: "Priya Nambiar",        role: "VP Engineering",   company: "StartScale SG",      review: "Their agile process and transparent project tracking gave us complete confidence throughout. The final product exceeded the brief — and post-launch support has been superb.",               avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&auto=format", rating: 5 },
+  {
+    name: "Arjun Mehta",
+    role: "CTO",
+    company: "TechVentures India",
+    review: "Vedaham delivered our cloud migration 3 weeks ahead of schedule. Their technical depth and proactive communication were outstanding — genuinely the best vendor relationship we've ever had.",
+    avatar: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=80&h=80&fit=crop&auto=format",
+    rating: 5,
+  },
+  {
+    name: "Sarah Mitchell",
+    role: "Product Director",
+    company: "HealthBridge UK",
+    review: "The mobile app they built has a 4.8-star rating on both stores. The UI/UX work was exceptional — they understood our users better than we expected from a first engagement.",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    rating: 5,
+  },
+  {
+    name: "Vikram Nair",
+    role: "Founder & CEO",
+    company: "RetailPro India",
+    review: "We needed a complex ERP integration in 6 months. Vedaham delivered on time and built it in a way our internal team can maintain. That kind of thoughtfulness is genuinely rare.",
+    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&auto=format",
+    rating: 5,
+  },
+  {
+    name: "Priya Nambiar",
+    role: "VP Engineering",
+    company: "StartScale Bangalore",
+    review: "Their agile process and transparent project tracking gave us complete confidence throughout. The final product exceeded the brief — and post-launch support has been superb.",
+    avatar: "https://randomuser.me/api/portraits/women/26.jpg",
+    rating: 5,
+  },
 ];
 
 const PROCESS = [
