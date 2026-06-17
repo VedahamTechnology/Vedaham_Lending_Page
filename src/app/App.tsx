@@ -192,7 +192,7 @@ function Navbar({ dark, setDark }: { dark: boolean; setDark: (v: boolean) => voi
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-10 flex items-center justify-between" style={{ height: 72 }}>
+      <div className="max-w-7xl mx-auto px-4 md:px-10  flex items-center justify-between" style={{ height: 72 }}>
         {/* Logo */}
         <a href="#" className="flex items-center flex-shrink-0">
           <img
@@ -1203,7 +1203,7 @@ export default function App() {
         * { box-sizing: border-box; }
       `}</style>
       <Navbar dark={dark} setDark={setDark} />
-      <div className="px-6 py-4">
+      <div className="md:px-6 md:py-4">
 
       <Hero />
       <StatsBar />
