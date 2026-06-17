@@ -370,7 +370,7 @@ function Hero() {
               {/* KPI row */}
               <div className="grid grid-cols-3 gap-3">
                 {[
-                  ["Total Revenue", "$2.4M",  "+18%", `text-[${BRAND_GREEN}]`],
+                  ["Total Revenue", "₹2.4M",  "+18%", `text-[${BRAND_GREEN}]`],
                   ["Active Users",  "48,291",  "+12%", `text-[${BRAND_BLUE}]`],
                   ["Conversion",   "3.7%",    "+0.4%", `text-[${BRAND_TEAL}]`],
                 ].map(([label, val, change, cls]) => (
